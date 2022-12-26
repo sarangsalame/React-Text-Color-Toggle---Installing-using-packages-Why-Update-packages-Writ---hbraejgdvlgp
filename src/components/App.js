@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/App.css';
-
+const App = () => {
 let [css, setCss]=useState(true)
 function change(){
   if(css===true){
@@ -9,7 +9,7 @@ function change(){
     setCss(true)
   }
 }
-const App = () => {
+
 //code here 
   return (
     <div id="main">
