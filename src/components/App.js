@@ -16,8 +16,10 @@ const App = () => {
   return (
     <div id="main">
       <p className={`redColor ${toggle ? "" : 'blueColor'}`} >Newton School</p>
-      <button id='button' onMouseDown={handleClick} onMouseUp={released}>Change Style</button>
+      <button id='button' onMouseDown={handleClick} onMouseLeave={released}>Change Style</button>
     </div>
   )
 }
+
+
 export default App;
