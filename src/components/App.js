@@ -2,29 +2,21 @@ import React, {useEffect, useState} from 'react'
 import '../styles/App.css';
 
 const App = () => {
-  let [css, setCss]=useState(true)
-  let [classs, setClasss]=useState("redColor")
-  useEffect(() => {
-    if(css){
-      setClasss("redColor")
-    }else{
-      setClasss("blueColor")
-    }    
-  }, [css])
-  
 
-  function change(){
-    setCss(!css)
+
+  const [toggle,setToggle] = useState(true)
+   function handleClick(){
+     setToggle(false)
   }
-//code here 
+
+  function released(){
+    setToggle(true)
+  }
 
   return (
     <div id="main">
-      <p className={classs} >Newton School</p>
-      <button id='button' onMouseDown={change} onMouseUp={change}>Change Style</button>
+      <p className={`redColor ${toggle ? "" : 'blueColor'}`} >Newton School</p>
+      <button id='button' onMouseDown={handleClick} onMouseLeave={released}>Change Style</button>
     </div>
   )
 }
-
-
-export default App;
