@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div id="main">
       <p className={classs} >Newton School</p>
-      <button id='button' onKeyPress={change}>Change Style</button>
+      <button id='button' onMouseDown={change} onMouseUp={change}>Change Style</button>
     </div>
   )
 }
